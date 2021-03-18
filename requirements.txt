@@ -72,9 +72,6 @@ tokenizers==0.9.3
 toml==0.10.2
 tools==0.1.9
 toolz==0.11.1
-torch==0.4.1
-torchtext==0.6.0
-torchvision==0.2.1
 tqdm==4.47.0
 transformers==3.5.1
 typing-extensions==3.7.4.3
