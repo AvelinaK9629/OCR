@@ -1,0 +1,50 @@
+{%extends "layout.html" %}
+
+{%block content%}
+
+    <h2 class="text-center mb-4 text-muted">TesserOCR</h2>
+    <br><br>
+    <div class="container">
+
+        <form action="/convertToText" method="post" enctype="multipart/form-data" id="uploadForm">
+            <h6 class="text-center mb-4 text-muted">
+                Select the type of Document to extract Text
+              </h6>
+            <select id="documentType" name="docType" class="form-select" aria-label="Default select example" required>
+              <option selected>Choose the document to validate</option>
+              <option value="panCard">PAN Card</option>
+              <option value="aadharCard">Aadhar Card</option>
+              <option value="drivingLincese">Driving License</option>
+              <option value="other">Other</option>
+            </select>
+
+            <br>
+            <h6 class="text-center mb-4 text-muted">
+                Upload your document
+              </h6>
+            <input type="file" class="form-control" id="img" name="img" accept="image/*,.pdf" required>
+
+            <br>
+            <div class="text-center col-12">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+
+<!--        <form action="/convertToText">-->
+<!--            <h6 class="text-center mb-4 text-muted">-->
+<!--                Select the type of Document to extract Text-->
+<!--              </h6>-->
+<!--            <select id="docType" name="docType" class="form-select" aria-label="Default select example" required>-->
+<!--              <option selected>Choose the document to validate</option>-->
+<!--              <option value="panCard">PAN card</option>-->
+<!--              <option value="invoice">Invoice</option>-->
+<!--              <option value="other">Other</option>-->
+<!--            </select>-->
+<!--            <br>-->
+<!--            <div class="text-center col-12">-->
+<!--                <button class="btn btn-primary" type="submit">Submit</button>-->
+<!--            </div>-->
+<!--        </form>-->
+    </div>
+
+{%endblock content%}

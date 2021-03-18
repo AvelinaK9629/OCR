@@ -1,0 +1,26 @@
+{%extends "layout.html" %}
+
+{%block content%}
+        <h2 class="text-center mb-4 text-muted">TesserOCR</h2>
+        <br><br>
+        <div class="container">
+            <form action="/freeOCR">
+                <img src="{{ url_for('send_image', filename=Img_path) }}" class="img-fluid" alt="Uploaded File">
+                <br><br>
+                <div class="form-group shadow-textarea">
+                    <h3 class="text-center mb-4 text-muted">Extracted Fields from the Document </h3>
+                    <br>
+                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="10" readonly>
+Licence No: {{ Converted_text.Licence_No }}
+DOB: {{ Converted_text.DOB }}
+Name: {{ Converted_text.Name }}
+Valid Till: {{ Converted_text.Valid_Till }}
+                    </textarea>
+                </div>
+                <br><br>
+                <div class="text-center col-12">
+                    <button class="btn btn-primary" type="submit">Submit Another Image</button>
+                </div>
+            </form>
+        </div>
+{%endblock content%}
